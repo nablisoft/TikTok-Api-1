@@ -259,7 +259,7 @@ class TikTokApi:
                 "user-agent": userAgent,
             },
             cookies=self.get_cookies(**kwargs),
-            proxies=self.__format_proxy(proxy),
+            proxies={"http": proxy},
             **self.requests_extra_kwargs,
         )
         try:
